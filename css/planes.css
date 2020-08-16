@@ -1,0 +1,163 @@
+.planes-container-cover{
+    width:  100%;
+    height: 400px;
+    position: relative;
+    top: 80px;
+    background-image: url(../img/IMG_20200815_143254_226.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.planes-container-cover::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 172, 255, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container-info-cover{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-info-cover h1{
+    font-size: 60px;
+    font-weight: 500;
+    color: silver;
+    margin-bottom: 20px;
+}
+
+.container-info-cover p{ 
+    color:  silver;
+    font-size: 20px ;
+    font-weight: 300px;
+
+}
+
+/*post*/
+
+.container-post{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.planes{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.planes .plan{
+    width: 350px;
+    background: white;
+    box-shadow: 0 0 20px -20px black ;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-bottom: 20px ;
+    
+}
+
+.plan .ctn-img{
+    width: 100%;
+
+}
+
+.plan .ctn-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.plan h2{
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.plan span{
+    display: block;
+    margin-top: 10px;
+    padding: 0px 20px;
+}
+
+.ctn-tag{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 16px;
+    margin-top: 10px;
+}
+
+.ctn-tag li{
+    list-style: none;
+    font-size: 14px;
+    margin: 4px;
+    padding: 6px 10px;
+    background: #e8e8e8;
+    cursor: default;
+
+    
+}
+
+
+.plan button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    color: honeydew;
+    background: palevioletred;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.regreso button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    color: honeydew;
+    background: palevioletred;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.plan button:hover{
+    opacity: 0.9;
+}
+
+
+@media screen and (max-width: 1200px){
+    .planes{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px){
+        .planes{
+            grid-template-columns: repeat(2, 1fr);
+         }
+}
+@media screen and (max-width: 580px){
+    .planes{
+        grid-template-columns: repeat(1, 1fr);
+     }
+}
